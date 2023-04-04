@@ -1,0 +1,13 @@
+{application, dot_app, [
+	{description, "New project"},
+	{vsn, "0.1.0"},
+	{modules, []},
+	{registered, []},
+	{applications, [
+		kernel,
+		stdlib
+	]},
+	{mod, {dot_app, []}},
+	{env, []},
+	{extra_data, [hello_there]}
+]}.
