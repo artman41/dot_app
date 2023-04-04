@@ -60,7 +60,7 @@ load_additional_info_(Application, AppPath, Appl) ->
             _ ->
                 Appl
         end,
-    {ok, [{application, dot_app, Props}]} = file:consult(AppPath),
+    {ok, [{application, Application, Props}]} = file:consult(AppPath),
     ExtraData = proplists:get_value(extra_data, Props, []),
     LargerAppl1 = setelement(ApplSize+1, LargerAppl0, ExtraData),
     ets:insert(dot_app_utils:ac_tab(), {{loaded, Application}, LargerAppl1}).
